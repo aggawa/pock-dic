@@ -7,24 +7,39 @@ function App() {
    const [todos, setTodos] = useState([
       {
          id: 1,
-         text: '헬스장 가기',
-         checked: true,
+         text: '이상해씨',
+         checked: false,
       },
       {
          id: 2,
-         text: '점심약속',
-         checked: true,
+         text: '이상해풀',
+         checked: false,
       },
       {
          id: 3,
-         text: '리액트 복습',
+         text: '이상해꽃',
+         checked: false,
+      },
+      {
+         id: 4,
+         text: '파이리',
+         checked: false,
+      },
+      {
+         id: 5,
+         text: '리자드',
+         checked: false,
+      },
+      {
+         id: 6,
+         text: '리자몽',
          checked: false,
       },
    ])
 
    // 고유 값으로 사용 될 id
    // ref 를 사용하여 변수 담기
-   const nextId = useRef(4)
+   const nextId = useRef(7)
 
    // 할 일 등록
    const onInsert = useCallback(
@@ -69,6 +84,7 @@ function App() {
 
    return (
       <Poke_Template>
+         {/* todoInsert 컴포넌트에서 할일을 등록하므로 onInsert 함수 props로 전달 */}
          <Poke_Insert onInsert={onInsert} />
          <Poke_List todos={todos} onRemove={onRemove} onToggle={onToggle} />
       </Poke_Template>

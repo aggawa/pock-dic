@@ -3,8 +3,8 @@ import './css/Poke_Template.css'
 
 function Poke_Template({ children }) {
    return (
-      <div className="Poke_Template">
-         <div className="app-title">TODO LIST</div>
+      <div className="TodoTemplate">
+         <div className="app-title">관동지방 포켓몬 도감</div>
          <div className="content">{children}</div>
       </div>
    )
