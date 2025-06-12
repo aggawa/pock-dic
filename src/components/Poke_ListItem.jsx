@@ -3,22 +3,16 @@ import { MdCheckBoxOutlineBlank, MdCheckBox } from 'react-icons/md'
 import classnames from 'classnames'
 import './css/Poke_ListItem.css'
 
+// 더블클릭 손보기
+const dblclick = document.querySelector('dblclick')
+
+dblclick.addEventListener('dblclick', () => {})
+
 function Poke_ListItem({ todo, onRemove, onToggle }) {
    const { id, text, checked } = todo
 
-   // 더블클릭시 비활성화 코드
-   // const img = document.querySelector('.img')
-   // img.addEventListener('dbClick', function () {
-   //    this.style.backgroundColor = 'gray'
-   //    this.classList.add('dbclick')
-   // })
-
-   // const imgUrl = (todo.text += '.jpg')
-   // console.log(imgUrl)
-   // console.log(todo.text + '.jpg')
-   // console.log(`${todo.text}.jpg`)
    return (
-      <div className="TodoListItem">
+      <div className="TodoListItem" id="dblclick">
          <div
             className={classnames('checkbox', { checked })}
             onClick={() => {
@@ -28,7 +22,7 @@ function Poke_ListItem({ todo, onRemove, onToggle }) {
             {checked ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}
             <div className="text">{text}</div>
          </div>
-         <div>
+         <div className="pic">
             <img src={'/imgs/' + todo.text + '.jpg'} alt={todo.text} />
          </div>
          <div
@@ -44,5 +38,3 @@ function Poke_ListItem({ todo, onRemove, onToggle }) {
 }
 
 export default Poke_ListItem
-
-// 그니까 이미지를 어떻게 텍스트 += '.jpg' ??
