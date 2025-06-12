@@ -4,12 +4,24 @@ import classnames from 'classnames'
 import './css/Poke_ListItem.css'
 
 // 더블클릭 손보기
-const dblclick = document.querySelector('dblclick')
+// const dblclick = document.querySelector('dblclick')
 
-dblclick.addEventListener('dblclick', () => {})
+// dblclick.addEventListener('dblclick', () => {
+//    const dbl_css = {
+//       'background-color': 'gray',
+//    }
+// })
 
 function Poke_ListItem({ todo, onRemove, onToggle }) {
    const { id, text, checked } = todo
+
+   // const dblclick = document.querySelector('dblclick')
+
+   // dblclick.addEventListener('dblclick', () => {
+   //    const dbl_css = {
+   //       'background-color': 'gray',
+   //    }
+   // })
 
    return (
       <div className="TodoListItem" id="dblclick">
@@ -22,6 +34,7 @@ function Poke_ListItem({ todo, onRemove, onToggle }) {
             {checked ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}
             <div className="text">{text}</div>
          </div>
+         {/* <div className="pic" style={dbl_css}> */}
          <div className="pic">
             <img src={'/imgs/' + todo.text + '.jpg'} alt={todo.text} />
          </div>
