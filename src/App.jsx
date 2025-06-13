@@ -35,6 +35,21 @@ function App() {
          text: '리자몽',
          checked: false,
       },
+      {
+         id: 7,
+         text: '꼬부기',
+         checked: false,
+      },
+      {
+         id: 8,
+         text: '어니부기',
+         checked: false,
+      },
+      {
+         id: 9,
+         text: '거북왕',
+         checked: false,
+      },
    ])
 
    // 고유 값으로 사용 될 id

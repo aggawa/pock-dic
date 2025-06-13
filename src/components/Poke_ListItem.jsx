@@ -4,27 +4,19 @@ import classnames from 'classnames'
 import './css/Poke_ListItem.css'
 
 // 더블클릭 손보기
-// const dblclick = document.querySelector('dblclick')
-
-// dblclick.addEventListener('dblclick', () => {
-//    const dbl_css = {
-//       'background-color': 'gray',
-//    }
-// })
 
 function Poke_ListItem({ todo, onRemove, onToggle }) {
    const { id, text, checked } = todo
 
-   // const dblclick = document.querySelector('dblclick')
-
-   // dblclick.addEventListener('dblclick', () => {
-   //    const dbl_css = {
-   //       'background-color': 'gray',
-   //    }
-   // })
+   const onDoubleClick = () => {
+      const TodoListItem = {
+         'background-color': 'gray',
+      }
+   }
+   // 더블클릭으로 css를 어떻게 바꿀지 잘 모르겠습니다..
 
    return (
-      <div className="TodoListItem" id="dblclick">
+      <div className="TodoListItem" onDoubleClick={onDoubleClick}>
          <div
             className={classnames('checkbox', { checked })}
             onClick={() => {
@@ -34,7 +26,6 @@ function Poke_ListItem({ todo, onRemove, onToggle }) {
             {checked ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}
             <div className="text">{text}</div>
          </div>
-         {/* <div className="pic" style={dbl_css}> */}
          <div className="pic">
             <img src={'/imgs/' + todo.text + '.jpg'} alt={todo.text} />
          </div>
