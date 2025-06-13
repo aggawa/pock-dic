@@ -8,15 +8,8 @@ import './css/Poke_ListItem.css'
 function Poke_ListItem({ todo, onRemove, onToggle }) {
    const { id, text, checked } = todo
 
-   const onDoubleClick = () => {
-      const TodoListItem = {
-         'background-color': 'gray',
-      }
-   }
-   // 더블클릭으로 css를 어떻게 바꿀지 잘 모르겠습니다..
-
    return (
-      <div className="TodoListItem" onDoubleClick={onDoubleClick}>
+      <div className="TodoListItem">
          <div
             className={classnames('checkbox', { checked })}
             onClick={() => {

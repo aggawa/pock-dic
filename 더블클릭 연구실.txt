@@ -1,0 +1,21 @@
+이미지 경로는 public으로 / 그리고 /image/ 이렇게 시작해야함 / 단순 문자열 연산이었음
+
+css로 이미지 크기 조절하기
+
+// <div className="TodoListItem" onDoubleClick={changeStyle()}>
+
+// myDiv.style.backgroundColor = 'red'
+// const TodoListItem = {
+//    'background-color': 'gray',
+// }
+
+// function changeStyle() {
+//    const myDiv = document.getElementsByClassName('TodoListItem')
+//    myDiv.style.backgroundColor = 'gray'
+// }
+// ↑ css
+
+function onDoubleClick() {
+      const myDiv = document.getElementsByClassName('pic')
+      myDiv.classList.add('changeCss')
+   }

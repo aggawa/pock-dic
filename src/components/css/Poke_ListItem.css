@@ -54,3 +54,7 @@
 /* .TodoListItem .pic img {
    background-color: gray;
 } */
+
+.TodoListItem .changeCss {
+   background-color: gray;
+}
